@@ -1,0 +1,112 @@
+/* =========================
+   🌙 YH-kollen – Modern Dashboard Theme
+   ========================= */
+
+/* ==== Baslayout ==== */
+body {
+    background-color: #f7f8fa;
+    color: #1f2937;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==== Navigationsfält ==== */
+.taipy-navbar {
+    background-color: #1e40af !important; /* Mörkblå */
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taipy-navbar-item {
+    color: #e5e7eb !important;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.taipy-navbar-item:hover {
+    color: #ffffff !important;
+}
+
+/* 🔹 Aktiv sida i navbaren */
+.taipy-navbar-item.active {
+    color: #ffffff !important;
+    border-bottom: 3px solid #60a5fa;
+    padding-bottom: 2px;
+}
+
+/* ==== Kort och komponenter ==== */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* KPI-rutor */
+.overview-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.overview-cards .card {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #e0f2fe;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* ==== Text och rubriker ==== */
+h1, h2, h3, h4 {
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #374151;
+}
+
+/* ==== Footer ==== */
+.footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ==== Responsivitet ==== */
+@media (max-width: 768px) {
+    .overview-cards {
+        flex-direction: column;
+    }
+
+    .taipy-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .taipy-navbar-item {
+        margin: 0.5rem 0;
+    }
+}
